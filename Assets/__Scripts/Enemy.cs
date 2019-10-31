@@ -31,7 +31,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-
+        if (bndCheck != null && bndCheck.offDown)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public virtual void Move()
